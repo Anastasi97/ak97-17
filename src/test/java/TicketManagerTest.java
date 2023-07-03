@@ -28,14 +28,14 @@ class TicketManagerTest {
         manager.add(ticket7);
         manager.add(ticket8);
 
-        Ticket[] expected = {ticket1, ticket4, ticket6, ticket8};
+        Ticket[] expected = {ticket1, ticket6, ticket4, ticket8};
         Ticket[] actual = manager.search("EKB", "MSK");
 
-         Assertions.assertArrayEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void testSortTickets1() {
+    public void testSortTicketsOne() {
         AviaSouls manager = new AviaSouls();
         Ticket ticket1 = new Ticket("EKB", "MSK", 300, 9, 12);
         Ticket ticket2 = new Ticket("EKB", "SPB", 200, 10, 14);
@@ -62,7 +62,7 @@ class TicketManagerTest {
     }
 
     @Test
-    public void testSortTickets0() {
+    public void testSortTicketsNull() {
         AviaSouls manager = new AviaSouls();
         Ticket ticket1 = new Ticket("EKB", "MSK", 300, 9, 12);
         Ticket ticket2 = new Ticket("EKB", "SPB", 200, 10, 14);
@@ -118,7 +118,7 @@ class TicketManagerTest {
     }
 
     @Test
-    public void testSortTicketsWithComparator1() {
+    public void testSortTicketsWithComparatorOne() {
         AviaSouls manager = new AviaSouls();
         Ticket ticket1 = new Ticket("EKB", "MSK", 300, 9, 12);
         Ticket ticket2 = new Ticket("EKB", "SPB", 200, 10, 14);
@@ -147,7 +147,7 @@ class TicketManagerTest {
     }
 
     @Test
-    public void testSortTicketsWithComparator0() {
+    public void testSortTicketsWithComparatorNull() {
         AviaSouls manager = new AviaSouls();
         Ticket ticket1 = new Ticket("EKB", "MSK", 300, 9, 12);
         Ticket ticket2 = new Ticket("EKB", "SPB", 200, 10, 14);
